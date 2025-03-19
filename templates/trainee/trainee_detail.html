@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Trainee Details</h2>
+<p>Name: {{ trainee.name }}</p>
+<p>Email: {{ trainee.email }}</p>
+<p>Image: <img src="{{ trainee.image.url }}" alt="Trainee Image"></p>
+<p>Training Track: {{ trainee.track }}</p>
+
+<a href="{% url 'trainee_list' %}">Back to List</a>
+{% endblock %}
